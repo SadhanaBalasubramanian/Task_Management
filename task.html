@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Task Management</title>
+        <script src="script/angular.min.js"></script>
+        <script src="components/task.js"></script>
+        <link rel="stylesheet" href="style/task.css"></link>
+    </head>
+
+    <body ng-app="task_management">
+        
+        <div class="container">
+
+            <div class="header">Task Management</div>
+
+            <div class="tasklist" ng-controller="TaskListController as taskList">
+                
+                <div class="active_task">
+                   <label> Active Tasks : </label>
+                   <span>{{taskList.remaining()}} of {{taskList.task.length}}</span>
+                </div>
+
+                <div class="task_list">
+                   <div>
+                       <table class="task_table">
+                            <tr class="task_details" ng-repeat="task in taskList.task ">
+                                <td><input type="checkbox" ng-model="taskdone" /></td>
+                                <td>
+                                    <span class="done-{{task.done}}">
+                                            {{task.text}}
+                                    </span>
+                                </td>
+                            </tr>
+                        </table>
+                   </div>
+                </div>
+            </div>
+
+            <div>
+            <form ng-submit="taskList.addTask()">
+
+                <input type="text" ng-model="taskList.taskText" size="30" placeholder="enter task name">
+                <input type="submit" value="Add Task" />
+
+            </form>
+            </div>
+        </div>
+
+    </body>
+</html>
