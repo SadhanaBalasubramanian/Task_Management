@@ -1,0 +1,41 @@
+.container{
+    min-width: 300px;
+    min-height: 500px;
+    border: 1px solid #9fa7ef9d;
+    width: auto;
+    height: auto;
+    background-color:#f3f3f5;
+}
+
+.header{
+    padding: 20px;
+    background-color: #2e2e5d;
+    color: white;
+    font-size: 30px;
+    position: sticky;
+}
+
+.active_task{
+    padding: 20px;
+    font-size: 20px;
+    background-color: bisque;
+    border-bottom: 1px solid #c8c9ca;
+}
+
+.task_list{
+    font-size: 18px;
+    padding: 10px;
+
+}
+.task_table{
+     table-layout: auto;
+}
+
+.task_details{
+    padding: 10px;
+    border-bottom: 1px solid gray;
+}
+.done-true{
+    text-decoration: line-through;
+    color: grey;
+}
